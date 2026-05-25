@@ -143,15 +143,16 @@ export default function App() {
     setCopilotLoading(true);
 
     try {
-      const response = await fetch('/api/ai/process-command', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt: textToSend,
-          userId: currentUser?.id,
-          organizationId: activeOrgId // Isolates copilot updates!
-        })
-      });
+     try {
+  const response = await fetch('https://estateflow-crm-production-c127.up.railway.app/api/ai/process-command', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      prompt: textToSend,
+      userId: currentUser?.id,
+      organizationId: activeOrgId
+    })
+  });
 
       if (response.ok) {
         const result = await response.json();
