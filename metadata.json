@@ -1,0 +1,6 @@
+{
+  "name": "EstateFlow CRM",
+  "description": "An expert, mobile-first full-stack Real Estate CRM for lead management, Twilio call bridging, instant WhatsApp follow-ups, unified inventory sharing, GPS work attendance tracking, and social media posting schedules.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
