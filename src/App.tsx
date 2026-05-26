@@ -1,9 +1,9 @@
-/**
+
  import { useState } from 'react';
 
 export default function App() {
   const [copilotLoading, setCopilotLoading] = useState(false);
-  const [copilotMessages, setCopilotMessages] = useState([]);
+  const [copilotMessages, setCopilotMessages] = useState<any[]>([]);
 
   const handleSendCopilotCommand = async (textToSend: string) => {
     setCopilotLoading(true);
